@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function status() {
+   echo "[STATUS OF $1]"
+   sudo systemctl status $1 | grep Active:
+}
+
+function stop() {
+   echo "[STOPPING $1]"
+   sudo systemctl stop $1
+}
+function start() {
+   echo "[START $1]"
+   sudo systemctl start $1
+}
+
+
+
+status nginx
+status home-service
+status self-service
+

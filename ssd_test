@@ -1,0 +1,3 @@
+
+curl http://127.0.0.1:5100/ssd_api/get_table
+
