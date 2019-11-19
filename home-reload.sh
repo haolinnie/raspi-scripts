@@ -5,7 +5,7 @@ function reload_server() {
    sudo systemctl stop home-service
 
    echo "[INFO] Pulling latest repo"
-   cd /var/www/home-service&& git pull
+   cd /var/www/home-service-v2 && git pull
 
    echo "[INFO] Restarting systemd service"
    sudo systemctl start home-service
@@ -14,7 +14,7 @@ function reload_server() {
    sudo systemctl status home-service | grep Active:
 
    echo "[INFO] Waiting for server to initialise"
-   sleep 1
+   sleep 2
 
    echo "[INFO] Running quick test"
    curl http://127.0.0.1:6969/home_api/get_curr_data?n=10
