@@ -6,7 +6,9 @@ function reload_server() {
    sudo systemctl stop self-service
 
    echo "[INFO] Pulling latest repo"
-   cd /var/www/ssd-mock && git pull
+   cd /var/www/ssd_server && git pull
+   source /var/www/ssd_server/flask/bin/activate
+   pip3 install .
 
    echo "[INFO] Restarting systemd service"
    sudo systemctl start self-service
