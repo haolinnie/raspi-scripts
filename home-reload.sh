@@ -17,7 +17,7 @@ function reload_server() {
    sleep 2
 
    echo "[INFO] Running quick test"
-   curl http://127.0.0.1:6969/home_api/get_curr_data?n=10
+   curl http://127.0.0.1:6969/home_api/sensor_temp?n=10
 }
 
 reload_server
