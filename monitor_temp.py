@@ -4,7 +4,7 @@ import time
 import requests
 
 
-url = "https://home.tigernie.com/home_api/"
+url = "http://192.168.1.69:6969/home_api/"
 
 def measure_temp():
     temp = float(os.popen("vcgencmd measure_temp").readline().strip().replace("temp=","").split("'")[0])
