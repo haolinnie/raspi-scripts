@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import adafruit_dht
 import board
 
@@ -14,7 +15,7 @@ url = "https://home.tigernie.com/home_api/sensor_humidity"
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         res = requests.post(url, data={
-                                     "name": "laundry closet",
+                                     "name": sys.argv[1],
                                      "humidity": humidity,
                                     })
         print(res)

@@ -7,8 +7,8 @@ function reload_server() {
 
    echo "[INFO] Pulling latest repo"
    cd /var/www/ssd_server && git pull
-   source /var/www/ssd_server/flask/bin/activate
-   pip3 install .
+   source ./flask/bin/activate
+   pip3 install -r requirements.txt
 
    echo "[INFO] Restarting systemd service"
    sudo systemctl start self-service
