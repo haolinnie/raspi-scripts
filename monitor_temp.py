@@ -17,7 +17,7 @@ def send_temp():
     res = requests.post(url+"pi_temp",
                         data={
                             "name": name,
-                            "temperature": temp
+                            "value": temp
                         }
                         )
     print(res)
