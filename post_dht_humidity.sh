@@ -13,4 +13,4 @@ EOF
 curl -i \
 -H "Accept: application/json" \
 -H "Content-Type:application/json" \
--X POST --data "$(generate_post_data $1)" "http://192.168.1.69:6969/home_api/sensor_humidity"
+-X POST --data "$(generate_post_data $1)" "http://192.168.1.69:6969/home_api/room_humidity"
