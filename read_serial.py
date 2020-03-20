@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import time
 import sys
 import glob
@@ -9,8 +9,8 @@ url = "https://home.tigernie.com/home_api/"
 
 
 def postData(url, name, x):
-    res = requests.post(url + 'sensor_data', 
-                        data={'where': name, 'temperature': x})
+    res = requests.post(url + 'room_temp', 
+                        json={'name': name, 'value': x})
     print(res)
     print(res.json())
 
@@ -60,5 +60,5 @@ if __name__ == "__main__":
         print(x)
     else:
         print(sys.argv[1], x)
-        # postData(url, sys.argv[1], x);
+        postData(url, sys.argv[1], x);
 
