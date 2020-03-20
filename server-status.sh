@@ -7,6 +7,4 @@ function check_server() {
 
 check_server https://tigernie.com
 check_server https://home.tigernie.com
-check_server https://tigernie.com/ssd_api
-check_server https://self-service.tigernie.com
 

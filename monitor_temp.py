@@ -15,7 +15,7 @@ def send_temp():
     name = os.popen("hostname").readline().strip()
     temp = measure_temp()
     res = requests.post(url+"server_temp",
-                        data={
+                        json={
                             "name": name,
                             "value": temp
                         }
