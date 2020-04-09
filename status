@@ -18,5 +18,4 @@ function start() {
 
 status nginx
 status home-service
-status self-service
 
