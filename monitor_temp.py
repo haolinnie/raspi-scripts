@@ -6,7 +6,7 @@ and post the data to an endpoint
 import glob
 import requests
 
-url = "http://192.168.1.69:6969/home_api/"
+url = "http://192.168.1.81:6613/home_api/"
 
 
 def read_cpu_temp():
